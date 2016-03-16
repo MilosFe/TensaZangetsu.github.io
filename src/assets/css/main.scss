@@ -8,16 +8,19 @@ $browser-default: 16px;
 $font-size: 16px;
 $large-font-size: 24px;
 
-
+/*==================================================
+  Preferences
+==================================================*/
 * {
-    margin: 0;
-    padding: 0;
+    -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+  margin: 0;
+  padding: 0; 
 }
 
 html {
--webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  
   font-size: em($font_size, $browser-default);
     height: 100%;
 }
@@ -40,6 +43,8 @@ img {
     margin: 0px auto;
 }
 
+
+
 /*==================================================
   Header
 ==================================================*/
@@ -49,7 +54,8 @@ img {
     padding-top: 25px;
     padding-bottom: 25px;
     z-index: 999;
-    transition: color .2s;
+    transition: color 0.2s;
+    background: rgba(0, 0, 0, 0.68);
     background-color: rgba(0, 0, 0, 0.83);
     background: linear-gradient(to bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 95%,rgba(0,0,0,0) 99%);
     color:white;
@@ -87,6 +93,10 @@ img {
 
 }
 
+/*==================================================
+  Hero
+==================================================*/
+
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.48),#000), url(../images/hero.jpg);
     background-size: cover;
@@ -94,6 +104,17 @@ img {
     min-height: 700px;
     
 }
+.hero-text {
+    color: white;
+    margin-top: em(314px, $browser-default);
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+
+/*==================================================
+  Home Section Me
+==================================================*/
 
 
 /* ==========================================================================
