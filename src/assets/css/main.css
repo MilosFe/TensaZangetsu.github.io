@@ -79,9 +79,8 @@ img {
   color: white;
   margin-top: 19.625em;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%); }
+  display: block;
+  text-align: center; }
 
 /*==================================================
   Home Section Me
