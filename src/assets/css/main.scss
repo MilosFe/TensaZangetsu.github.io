@@ -1,7 +1,6 @@
 @function em($target, $context: $font_size) {
-  @return ($target / $context) * 1em;
+    @return ($target / $context) * 1em;
 }
-
 
 //Main variables 
 $browser-default: 16px;
@@ -11,25 +10,25 @@ $large-font-size: 24px;
 /*==================================================
   Preferences
 ==================================================*/
+
 * {
     -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-    box-sizing: border-box;    
-  margin: 0;
-  padding: 0; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  
-  font-size: em($font_size, $browser-default);
+    font-size: em($font_size, $browser-default);
     height: 100%;
 }
+
 body {
-  font-family: "Lato", serif;
-  font-size: $browser-default;
-  font-weight: 400;
-  line-height: em(24px, $browser-default);
-  
+    font-family: "Lato", serif;
+    font-size: $browser-default;
+    font-weight: 400;
+    line-height: em(24px, $browser-default);
 }
 
 img {
@@ -37,17 +36,35 @@ img {
     height: auto;
 }
 
-
 .wrapper {
     width: 90%;
     margin: 0px auto;
 }
 
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
 
 
 /*==================================================
   Header
 ==================================================*/
+
 .header-dark {
     position: fixed;
     width: 100%;
@@ -57,64 +74,74 @@ img {
     transition: color 0.2s;
     background: rgba(0, 0, 0, 0.68);
     background-color: rgba(0, 0, 0, 0.83);
-    background: linear-gradient(to bottom,rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 95%,rgba(0,0,0,0) 99%);
-    color:white;
-   
-}
-
-.logo {
-    width:em(30px, $browser-default);
-    height:em(30px, $browser-default);
-    border-radius:100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 99%);
     color: white;
-    line-height:em(30px, $browser-default);;
-    text-align:center;
-    float: left;
-    border: 2px solid white;
- 
+    .logo {
+        width: em(30px, $browser-default);
+        height: em(30px, $browser-default);
+        border-radius: 100%;
+        color: white;
+        text-align: center;
+        float: left;
+        border: 2px solid white;
+        span {
+            line-height: 0;
+        }
+    }
 }
 
 .navigation {
     float: right;
+    
+    li {
+        display: inline-block;
+        list-style: none;
+    }
+    
+    li a {
+        text-decoration: none;
+        float: left;
+        list-style: none;
+        display: block;
+        color: white;
+        margin-left: em(20px, $browser-default);
+    }
 }
 
-.navigation li {
-    display: inline-block;
-    list-style: none;
-}
-
-.navigation li a {
-    text-decoration: none;
-    float: left;
-    list-style: none;
-    display: block;
-    color: white;
-    margin-left: em(20px, $browser-default);
-
-}
 
 /*==================================================
   Hero
 ==================================================*/
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.48),#000), url(../images/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.48), #000), url(../images/hero.jpg);
     background-size: cover;
     background-position: center;
     min-height: 700px;
     
-}
-.hero-text {
+    .hero-text {
     color: white;
     margin-top: em(314px, $browser-default);
-    position: absolute;
     display: block;
     text-align: center;
+    padding: em(10px, $browser-default);
+}
 }
 
+
+
+
 /*==================================================
-  Home Section Me
+  About Section Me
 ==================================================*/
+.personal {
+    position: relative;
+    width: 100;
+    min-height: em(314px, $browser-default);
+}
+
+
+
 
 
 /* ==========================================================================
@@ -165,6 +192,7 @@ img {
     *zoom: 1;
 }
 
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -178,51 +206,41 @@ img {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
@@ -234,7 +252,7 @@ img {
     Grid System
 \*------------------------------*/
 
-.row, 
+.row,
 .column {
     box-sizing: border-box;
 }
@@ -309,30 +327,31 @@ img {
 }
 
 @media only screen and (max-width: 550px) {
-    .column-1, 
-    .column-2, 
-    .column-3, 
-    .column-4, 
-    .column-5, 
-    .column-6, 
-    .column-7, 
-    .column-8, 
-    .column-9, 
-    .column-10, 
-    .column-11, 
+    .column-1,
+    .column-2,
+    .column-3,
+    .column-4,
+    .column-5,
+    .column-6,
+    .column-7,
+    .column-8,
+    .column-9,
+    .column-10,
+    .column-11,
     .column-12 {
         float: none;
         width: auto;
     }
-  
     .column + .column {
         margin-left: 0;
     }
 }
 
+
 /*------------------------------*\
     Styling
 \*------------------------------*/
+
 .column {
     background: #eee;
     border: 1px solid #ccc;
@@ -358,9 +377,9 @@ img {
 }
 
 .p {
-  font-size: 14px;
-  text-align: center;
-  padding-top: 100px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 100px;
 }
 
 @media only screen and (max-width: 550px) {
