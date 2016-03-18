@@ -1,9 +1,19 @@
-(function (global, $) {
+(function (global, $) { 
+    'use strict'
+    //Should refactor this 
+    function cursorAnimation() {
+        $('#cursor').animate({
+            opacity: 0
+        }, 'fast', 'swing').animate({
+            opacity: 1
+        }, 'fast', 'swing');
+    }
+    
     var x = ["Developer",
             "Designer",
             "Coder"];
     var i = 0;
-//Closure should not be after break up
+    //Closure should not be after break up
     function type() {
         $("#container").html("");
         $.each(x[i].split(''), function (index, letter) {
@@ -19,6 +29,6 @@
             i = 0;
         }
     }
-    window.setInterval(type, 6000);
-
+    setInterval(type, 6000);
+    setInterval (cursorAnimation, 600);
 })(this, jQuery)
