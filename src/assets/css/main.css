@@ -1,6 +1,10 @@
 /*==================================================
   Preferences
 ==================================================*/
+.fb-like {
+  width: 80px;
+  height: 80px; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -100,17 +104,29 @@ h4 {
     text-align: center;
     padding: 0.625em; }
 
-
 /*==================================================
   About Section Me
 ==================================================*/
 .personal {
   position: relative;
   width: 100;
-  min-height: 19.625em; }
+  min-height: 19.625em;
+  padding-top: 1.25em;
+  text-align: center;
+  display: block;
+  width: 100%; }
 
-
-
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-width: 50em) {
+  /* Style adjustments for viewports that meet the condition */
+  .hero {
+    max-height: 37.5em; }
+    .hero .hero-text {
+      margin-top: 12.5em; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for viewports that meet the condition */ }
 /* ==========================================================================
    Helper classes
    ========================================================================== */

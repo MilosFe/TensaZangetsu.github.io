@@ -10,7 +10,10 @@ $large-font-size: 24px;
 /*==================================================
   Preferences
 ==================================================*/
-
+.fb-like{
+    width: 80px;
+    height: 80px;
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -138,8 +141,31 @@ h4 {font-size: 1.333em;}
     position: relative;
     width: 100;
     min-height: em(314px, $browser-default);
+    padding-top:  em(20px, $browser-default);
+    text-align: center;
+    display: block;
+    width: 100%;
+        
+}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width: em(800px, $browser-default) ) {
+    /* Style adjustments for viewports that meet the condition */
+    .hero {
+        max-height: em(600px, $browser-default);
+        .hero-text{
+             margin-top: em(200px, $browser-default);
+            
+        }
+    }
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
 
 
 

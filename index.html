@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
 
 <head>
     <meta charset="UTF-8">
     <title>TZ</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Mobile -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="cleartype" content="on">
     <meta name="author" content="Radoman Milos">
-    <title>TZ</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Radoman Milos web developer">
+    <meta name="keywords" content="milos, serbia, frontend, backend">
+    <!-- Open Graph protocol -->
+    <meta property="og:locale" content="sr">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Developers page">
+    <meta property="og:description" content="Radoman Milos friendly developer">
+    <meta property="og:url" content="http://tensazangetsu.github.io">
+    <meta property="og:site_name" content="tensazangetsu">
+    <meta property="og:image" content="src/assets/images/icons/Icon.png">
+    <!-- Css -->
+    <link rel="canonical" href="http://tensazangetsu.github.io/">
     <link href='https://fonts.googleapis.com/css?family=Lato:700,300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="src/assets/css/main.css">
-    <script src="src/components/jquery/dist/jquery.min.js"></script>
-    <script src="src/assets/js/main.js"></script>
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="src/assets/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="src/assets/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="src/assets/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="src/assets/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="src/assets/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="src/assets/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="src/assets/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="src/assets/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="src/assets/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="src/assets/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header-dark">
         <div class="wrapper">
             <div class="logo">
@@ -31,20 +62,29 @@
             </nav>
         </div>
     </header>
+    <!-- Hero image -->
     <section class="hero clearfix">
         <div class="hero-text">
             <h1>My name is Milos and I'm your friendly <p id="container"></p></h1>
         </div>
     </section>
+    <!-- About Section  -->
     <section class="personal clearfix">
         <article class="about row">
-            <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
-            </div>
-
+            <h1>Welcome </h1>
+           
         </article>
     </section>
+      <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 </body>
-
+<!-- Scripting  -->
+<script src="src/components/jquery/dist/jquery.min.js"></script>
+<script src="src/assets/js/main.js"></script>
 <script>
     window.fbAsyncInit = function() {
         FB.init({
@@ -66,5 +106,6 @@
     }(document, 'script', 'facebook-jssdk'));
 
 </script>
+
 
 </html>
