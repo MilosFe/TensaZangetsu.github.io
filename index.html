@@ -23,6 +23,7 @@
     <!-- Css -->
     <link rel="canonical" href="http://tensazangetsu.github.io/">
     <link href='https://fonts.googleapis.com/css?family=Lato:700,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="src/assets/css/font-awesome-4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/assets/css/main.css">
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="57x57" href="src/assets/images/icons/apple-icon-57x57.png">
@@ -51,11 +52,13 @@
             <div class="logo">
                 <span class="t">T<span class="z">Z</span></span>
             </div>
+            <i class="fa fa-bars"></i>
             <nav class="navigation" role="navigation">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#git">Showcase</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -68,16 +71,67 @@
         </div>
     </section>
     <!-- About Section  -->
-    <section class="personal clearfix">
-        <article class="about row">
-            <h1>Welcome </h1>
-
+    <section id="about" class="personal  clearfix">
+        <article class="wrapper row about">
+            <div class="column column-12">
+                <h1>About</h1>
+                <i class="fa fa-user-secret"></i>
+                <h3>Radoman Milos - Web Developer</h3>
+                <h5>I love to read and write code, semi-pro Dota player and overall computer geek</h5>
+                <button class="btn"><a href="src/assets/downloads/Milos.pdf">Resume</a> </button>
+            </div>
         </article>
     </section>
-    
+    <!-- Git Section  -->
+    <section id="git" class="git  clearfix">
+        <article class="wrapper row showcase">
+            <h1>Github Showcase</h1>
+            <div class="column column-3">
+                <div class="overlay">
+                   <a href="https://github.com/TensaZangetsu/blog">
+                    <img src="src/assets/images/Cms-tri-color.jpg" alt="custom cms git">
+                    </a>
+                </div>
+            </div>
+            <div class="column column-3">
+               <a href="https://github.com/TensaZangetsu/Zend_MVC">
+                <img src="src/assets/images/Zend-tri-color.jpg" alt="zend php tutorial">
+                </a>
+            </div>
+            <div class="column column-3">
+               <a href="https://github.com/TensaZangetsu/Typewriter">
+                <img src="src/assets/images/Typewriter-tri-color.jpg" alt="typewriter libary">
+                </a>
+            </div>
+            <div class="column column-3">
+               <a href="https://github.com/TensaZangetsu/AngularJs_Session">
+                <img src="src/assets/images/App-factory-tri-color.jpg" alt="angular simple login session">
+                </a>
+            </div>
+        </article>
+    </section>
+    <!-- Contact and Map Section  -->
+    <section id="contact" class="contact  clearfix">
+        <article class="wrapper row">
+            <h1>Find me</h1>
+            <div class="column column-12">
+                <div id="map">
+                    
+                </div>
+            
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="wrapper row clearfix">
+            <p id="date">Radoman Milos git</p>
+        </div>
+    </footer>
+
 </body>
 <!-- Scripting  -->
 <script src="src/components/jquery/dist/jquery.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
 <script src="src/assets/js/main.js"></script>
 <script>
     window.fbAsyncInit = function() {
@@ -98,7 +152,6 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
 </script>
 
 

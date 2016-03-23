@@ -33,7 +33,10 @@ img {
 p {
   margin-bottom: 1.3em; }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2; }
@@ -61,6 +64,7 @@ h4 {
   padding-bottom: 25px;
   z-index: 999;
   transition: color 0.2s;
+  background: black;
   background: rgba(0, 0, 0, 0.68);
   background-color: rgba(0, 0, 0, 0.83);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0, transparent 95%, transparent 99%);
@@ -75,6 +79,18 @@ h4 {
     border: 2px solid white; }
     .header-dark .logo span {
       line-height: 0; }
+  .header-dark .fa {
+    width: 2.5em;
+    height: 2.5em;
+    clear: both;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    cursor: pointer;
+    padding: 1.3em 0 1.4em;
+    font-size: 1.3em;
+    z-index: 1000; }
 
 .navigation {
   float: right; }
@@ -109,12 +125,90 @@ h4 {
 ==================================================*/
 .personal {
   position: relative;
-  width: 100;
   min-height: 19.625em;
   padding-top: 1.25em;
   text-align: center;
   display: block;
-  width: 100%; }
+  min-height: 600px;
+  background-color: #F3F3F3;
+  color: black;
+  padding-bottom: 3.125em; }
+  .personal .fa {
+    font-size: 1.3rem;
+    padding: 3px;
+    font-size: 6.25em; }
+  .personal .about {
+    padding-bottom: 3.125em; }
+    .personal .about a {
+      text-decoration: none;
+      color: white; }
+  .personal .btn {
+    position: relative;
+    margin-top: 2.5em;
+    background: #000000;
+    background-image: -webkit-linear-gradient(top, #000000, #687075);
+    background-image: -moz-linear-gradient(top, #000000, #687075);
+    background-image: -ms-linear-gradient(top, #000000, #687075);
+    background-image: -o-linear-gradient(top, #000000, #687075);
+    background-image: linear-gradient(to bottom, #000000, #687075);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none; }
+  .personal .btn:hover {
+    background: #678394;
+    background-image: -webkit-linear-gradient(top, #678394, #4f4f4f);
+    background-image: -moz-linear-gradient(top, #678394, #4f4f4f);
+    background-image: -ms-linear-gradient(top, #678394, #4f4f4f);
+    background-image: -o-linear-gradient(top, #678394, #4f4f4f);
+    background-image: linear-gradient(to bottom, #678394, #4f4f4f);
+    text-decoration: none; }
+
+/*==================================================
+  Showcae Section
+==================================================*/
+.git {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding-top: 1.25em;
+  padding-bottom: 3.125em;
+  position: relative; }
+  .git h1 {
+    padding-bottom: 0.9375em; }
+
+/*==================================================
+  Contact and Map Section 
+==================================================*/
+.contact {
+  position: relative;
+  min-height: 19.625em;
+  padding-top: 1.25em;
+  text-align: center;
+  display: block;
+  min-height: 600px;
+  background-color: #F3F3F3;
+  color: black;
+  padding-bottom: 3.125em;
+  text-align: center; }
+  .contact #map {
+    height: 500px; }
+
+/*==================================================
+  Footer 
+==================================================*/
+footer {
+  background: #222;
+  border-top: 4px solid #1F1F1F;
+  padding: 2.10em 0 0;
+  position: relative;
+  clear: both;
+  color: #656565;
+  color: white; }
 
 /* ==========================================================================
    Media Queries
@@ -125,6 +219,25 @@ h4 {
     max-height: 37.5em; }
     .hero .hero-text {
       margin-top: 12.5em; } }
+@media only screen and (max-width: 31.25em) {
+  .navigation {
+    display: none;
+    clear: both;
+    width: 100%;
+    position: absolute;
+    padding-top: 5.125em;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background-color: darkgrey;
+    background-color: rgba(34, 34, 34, 0.95); }
+    .navigation li {
+      display: block; }
+    .navigation li a {
+      float: none;
+      padding: 0.85em;
+      margin-left: 0;
+      width: 100%; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   /* Style adjustments for viewports that meet the condition */ }
 /* ==========================================================================
@@ -299,10 +412,6 @@ h4 {
     Styling
 \*------------------------------*/
 .column {
-  background: #eee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #777;
   padding: 5px;
   min-height: 30px;
   text-align: center; }
@@ -312,11 +421,6 @@ h4 {
 
 .row:last-child {
   margin-bottom: 0; }
-
-.column .column {
-  color: #eee;
-  background: #333;
-  border-color: #000; }
 
 .p {
   font-size: 14px;

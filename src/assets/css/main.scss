@@ -2,7 +2,7 @@
     @return ($target / $context) * 1em;
 }
 
-//Main variables 
+//Main variables
 $browser-default: 16px;
 $font-size: 16px;
 $large-font-size: 24px;
@@ -10,10 +10,12 @@ $large-font-size: 24px;
 /*==================================================
   Preferences
 ==================================================*/
-.fb-like{
+
+.fb-like {
     width: 80px;
     height: 80px;
 }
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -44,24 +46,35 @@ img {
     margin: 0px auto;
 }
 
-p {margin-bottom: 1.3em;}
+p {
+    margin-bottom: 1.3em;
+}
 
-h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
+h1,
+h2,
+h3,
+h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 3.157em;
+    margin-top: 0;
+    font-size: 3.157em;
 }
 
-h2 {font-size: 2.369em;}
+h2 {
+    font-size: 2.369em;
+}
 
-h3 {font-size: 1.777em;}
+h3 {
+    font-size: 1.777em;
+}
 
-h4 {font-size: 1.333em;}
+h4 {
+    font-size: 1.333em;
+}
 
 
 /*==================================================
@@ -75,6 +88,7 @@ h4 {font-size: 1.333em;}
     padding-bottom: 25px;
     z-index: 999;
     transition: color 0.2s;
+    background: black;
     background: rgba(0, 0, 0, 0.68);
     background-color: rgba(0, 0, 0, 0.83);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 99%);
@@ -91,16 +105,29 @@ h4 {font-size: 1.333em;}
             line-height: 0;
         }
     }
+    
+    .fa {
+        width: em(40px, $browser-default);
+        height: em(40px, $browser-default);
+        clear: both;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        cursor: pointer;
+        padding: 1.3em 0 1.4em;
+        font-size: 1.3em;
+        z-index: 1000;
+        
+    }
 }
 
 .navigation {
     float: right;
-    
     li {
         display: inline-block;
         list-style: none;
     }
-    
     li a {
         text-decoration: none;
         float: left;
@@ -121,53 +148,174 @@ h4 {font-size: 1.333em;}
     background-size: cover;
     background-position: center;
     min-height: 700px;
-    
     .hero-text {
-    color: white;
-    margin-top: em(314px, $browser-default);
-    display: block;
-    text-align: center;
-    padding: em(10px, $browser-default);
+        color: white;
+        margin-top: em(314px, $browser-default);
+        display: block;
+        text-align: center;
+        padding: em(10px, $browser-default);
+    }
 }
-}
-
-
 
 
 /*==================================================
   About Section Me
 ==================================================*/
+
 .personal {
     position: relative;
-    width: 100;
     min-height: em(314px, $browser-default);
-    padding-top:  em(20px, $browser-default);
+    padding-top: em(20px, $browser-default);
     text-align: center;
     display: block;
-    width: 100%;
-        
+    min-height: 600px;
+    background-color: #F3F3F3;
+    color: black;
+    padding-bottom: em(50px, $browser-default);
+    .fa {
+        font-size: 1.3rem;
+        padding: 3px;
+        font-size: em(100px, $browser-default);
+    }
+    .about {
+        padding-bottom: em(50px, $browser-default);
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    
+    .btn {
+        position: relative;
+        margin-top: em(40px, $browser-default);
+        background: #000000;
+        background-image: -webkit-linear-gradient(top, #000000, #687075);
+        background-image: -moz-linear-gradient(top, #000000, #687075);
+        background-image: -ms-linear-gradient(top, #000000, #687075);
+        background-image: -o-linear-gradient(top, #000000, #687075);
+        background-image: linear-gradient(to bottom, #000000, #687075);
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+    }
+    .btn:hover {
+        background: #678394;
+        background-image: -webkit-linear-gradient(top, #678394, #4f4f4f);
+        background-image: -moz-linear-gradient(top, #678394, #4f4f4f);
+        background-image: -ms-linear-gradient(top, #678394, #4f4f4f);
+        background-image: -o-linear-gradient(top, #678394, #4f4f4f);
+        background-image: linear-gradient(to bottom, #678394, #4f4f4f);
+        text-decoration: none;
+    }
 }
+
+
+/*==================================================
+  Showcae Section
+==================================================*/
+
+.git {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding-top: em(20px, $browser-default);
+    padding-bottom: em(50px, $browser-default);
+    position: relative;
+        
+        h1 {
+             padding-bottom: em(15px, $browser-default); 
+        }
+    }
+  
+/*==================================================
+  Contact and Map Section 
+==================================================*/
+
+.contact {
+    position: relative;
+    min-height: em(314px, $browser-default);
+    padding-top: em(20px, $browser-default);
+    text-align: center;
+    display: block;
+    min-height: 600px;
+    background-color: #F3F3F3;
+    color: black;
+    padding-bottom: em(50px, $browser-default);
+    text-align: center;
+    #map {
+    
+        height: 500px;
+    
+    }
+    }
+/*==================================================
+  Footer 
+==================================================*/
+
+footer{
+    background: #222;
+    border-top: 4px solid #1F1F1F;
+    padding: 2.10em 0 0;
+    position: relative;
+    clear: both;
+    color: #656565;
+    color: white;
+}
+
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: em(800px, $browser-default) ) {
+@media only screen and (max-width: em(800px, $browser-default)) {
     /* Style adjustments for viewports that meet the condition */
     .hero {
         max-height: em(600px, $browser-default);
-        .hero-text{
-             margin-top: em(200px, $browser-default);
-            
+        .hero-text {
+            margin-top: em(200px, $browser-default);
         }
     }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: em(500px, $browser-default)) {
+   
+
+.navigation {
+        display: none;
+        clear: both;    
+        width: 100%;
+        position: absolute;
+        padding-top: em(82px, $browser-default);
+        left: 0;
+        top: 0;
+        text-align: center;
+        background-color: darkgrey;
+        background-color: rgba(34, 34, 34, 0.95);
+    
+    li{
+        display: block;
+    }
+    
+    li a {
+          float: none;
+        padding: 0.85em;
+        margin-left: 0;
+        width:100%;
+    }
+}
+   
 }
 
-
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
 
 
 /* ==========================================================================
@@ -379,10 +527,6 @@ h4 {font-size: 1.333em;}
 \*------------------------------*/
 
 .column {
-    background: #eee;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #777;
     padding: 5px;
     min-height: 30px;
     text-align: center;
@@ -397,9 +541,7 @@ h4 {font-size: 1.333em;}
 }
 
 .column .column {
-    color: #eee;
-    background: #333;
-    border-color: #000;
+    //Blank for now
 }
 
 .p {
