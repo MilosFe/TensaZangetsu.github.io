@@ -58,23 +58,29 @@
             map.setCenter(center)
         })
     }
-    //Init functions
-    initMap();
-    setInterval(type, 4000);
-    setInterval(cursorAnimation, 600);
+    
+ 
 
     var d = new Date();
     document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()
 
     //* Note to thy self - this is ugly refactor it
-    $(document).on("click", ".header-dark .fa", function () {
-        $('.navigation').slideToggle('fast');
-    });
-    $(document).on("click", ".header-dark .navigation  ul li a", function () {
-        if ($(window).width() < 960) {
+    var menu = function () {
+        $(document).on("click", ".header-dark .fa", function () {
             $('.navigation').slideToggle('fast');
-        }
-    });
+        });
+        $(document).on("click", ".header-dark .navigation  ul li a", function () {
+            if ($(window).width() < 960) {
+                $('.navigation').slideToggle('fast');
+            }
+        });
+    }
+    //Init functions
+    initMap();
+    menu();
+    setInterval(type, 4000);
+    setInterval(cursorAnimation, 600);
+
 
 
 

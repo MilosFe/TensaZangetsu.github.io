@@ -86,7 +86,7 @@ h4 {
     position: absolute;
     right: 0;
     top: 0;
-    display: block;
+    display: none;
     cursor: pointer;
     padding: 1.3em 0 1.4em;
     font-size: 1.3em;
@@ -213,6 +213,10 @@ footer {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (min-width: 31.3125em) {
+  /* Style adjustments for viewports that meet the condition */
+  .navigation {
+    display: block !important; } }
 @media only screen and (max-width: 50em) {
   /* Style adjustments for viewports that meet the condition */
   .hero {
@@ -220,6 +224,9 @@ footer {
     .hero .hero-text {
       margin-top: 12.5em; } }
 @media only screen and (max-width: 31.25em) {
+  .header-dark .fa {
+    display: block; }
+
   .navigation {
     display: none;
     clear: both;

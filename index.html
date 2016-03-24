@@ -19,7 +19,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Developers Blog" />
     <meta property="og:description" content="Programing and stuff" />
-    <meta property="og:image" content="http://tensazangetsu.github.io/src/assets/images/hero.jpg" />
+    <meta property="og:image" content="http://tensazangetsu.github.io/src/assets/images/share.png" />
     <!-- Css -->
     <link rel="canonical" href="http://tensazangetsu.github.io/">
     <link href='https://fonts.googleapis.com/css?family=Lato:700,300,400' rel='stylesheet' type='text/css'>
@@ -88,24 +88,24 @@
             <h1>Github Showcase</h1>
             <div class="column column-3">
                 <div class="overlay">
-                   <a href="https://github.com/TensaZangetsu/blog">
-                    <img src="src/assets/images/Cms-tri-color.jpg" alt="custom cms git">
+                    <a href="https://github.com/TensaZangetsu/blog">
+                        <img src="src/assets/images/Cms-tri-color.jpg" alt="custom cms git">
                     </a>
                 </div>
             </div>
             <div class="column column-3">
-               <a href="https://github.com/TensaZangetsu/Zend_MVC">
-                <img src="src/assets/images/Zend-tri-color.jpg" alt="zend php tutorial">
+                <a href="https://github.com/TensaZangetsu/Zend_MVC">
+                    <img src="src/assets/images/Zend-tri-color.jpg" alt="zend php tutorial">
                 </a>
             </div>
             <div class="column column-3">
-               <a href="https://github.com/TensaZangetsu/Typewriter">
-                <img src="src/assets/images/Typewriter-tri-color.jpg" alt="typewriter libary">
+                <a href="https://github.com/TensaZangetsu/Typewriter">
+                    <img src="src/assets/images/Typewriter-tri-color.jpg" alt="typewriter libary">
                 </a>
             </div>
             <div class="column column-3">
-               <a href="https://github.com/TensaZangetsu/AngularJs_Session">
-                <img src="src/assets/images/App-factory-tri-color.jpg" alt="angular simple login session">
+                <a href="https://github.com/TensaZangetsu/AngularJs_Session">
+                    <img src="src/assets/images/App-factory-tri-color.jpg" alt="angular simple login session">
                 </a>
             </div>
         </article>
@@ -116,16 +116,19 @@
             <h1>Find me</h1>
             <div class="column column-12">
                 <div id="map">
-                    
+
                 </div>
-            
+
             </div>
         </article>
     </section>
+    
     <footer>
         <div class="wrapper row clearfix">
             <p id="date">Radoman Milos git</p>
         </div>
+          
+    <div class="fb-share-button" data-href="http://tensazangetsu.github.io" data-layout="button"></div>
     </footer>
 
 </body>
@@ -133,25 +136,17 @@
 <script src="src/components/jquery/dist/jquery.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script src="src/assets/js/main.js"></script>
+<div id="fb-root"></div>
 <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId: '1568347296809830',
-            xfbml: true,
-            version: 'v2.5'
-        });
-    };
-
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
+        if (d.getElementById(id)) return;
         js = d.createElement(s);
         js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1568347296809830";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
 </script>
 
 

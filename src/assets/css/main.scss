@@ -113,7 +113,7 @@ h4 {
         position: absolute;
         right: 0;
         top: 0;
-        display: block;
+        display: none;
         cursor: pointer;
         padding: 1.3em 0 1.4em;
         font-size: 1.3em;
@@ -273,6 +273,13 @@ footer{
    Media Queries
    ========================================================================== */
 
+@media only screen and (min-width: em(501px, $browser-default)) {
+    /* Style adjustments for viewports that meet the condition */
+    .navigation {
+          display: block !important;
+    }
+}
+
 @media only screen and (max-width: em(800px, $browser-default)) {
     /* Style adjustments for viewports that meet the condition */
     .hero {
@@ -284,7 +291,9 @@ footer{
 }
 
 @media only screen and (max-width: em(500px, $browser-default)) {
-   
+    .header-dark .fa {
+        display: block;
+    }
 
 .navigation {
         display: none;
