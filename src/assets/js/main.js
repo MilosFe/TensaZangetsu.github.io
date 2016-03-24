@@ -1,5 +1,4 @@
 (function (global, $) {
-    'use strict'
 
     //Should refactor this for future use
     function cursorAnimation() {
@@ -58,11 +57,13 @@
             map.setCenter(center)
         })
     }
-    
- 
 
-    var d = new Date();
-    document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()
+
+    var setDate = function(){
+        var d = new Date();
+        document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()  
+    } 
+  
 
     //* Note to thy self - this is ugly refactor it
     var menu = function () {
@@ -70,14 +71,26 @@
             $('.navigation').slideToggle('fast');
         });
         $(document).on("click", ".header-dark .navigation  ul li a", function () {
-            if ($(window).width() < 960) {
+            
+            //Remove slide menu on click
+            if ($(window).width() < 501) {
                 $('.navigation').slideToggle('fast');
-            }
+            };
+            //Html is needed for Firefox otherwise works fine with body
+            $('html,body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 1000);
+            return false;
         });
+
     }
-    //Init functions
+
+ 
+
+    //Init functions :) 
     initMap();
     menu();
+    setDate();
     setInterval(type, 4000);
     setInterval(cursorAnimation, 600);
 
