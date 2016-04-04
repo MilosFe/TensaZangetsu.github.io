@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /kh
+Allow: /vt
+Allow: /maps/vt
