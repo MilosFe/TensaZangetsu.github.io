@@ -84,19 +84,7 @@
         });
 
     }
-        var animate = function () {
-            var slideElement = '.animate';
-        if ($(slideElement).length) {
-            $(slideElement).each(function () {
-            var elementPosition = $(this).offset().top;
-            var top = $(global).scrollTop();
-             var windowHeght = $(global).height();
-               if (elementPosition < top + (windowHeght / 1.4)) {
-                    $(this).addClass('fadeInDown');
-                }
-            });
-        }
-    }
+
  
 
     //Init functions :) 
@@ -105,11 +93,6 @@
     setDate();
     setInterval(type, 4000);
     setInterval(cursorAnimation, 600);
-    animate();
-    $(global).on('scroll', function() {
-            animate();
-        });
-
 
 
 
