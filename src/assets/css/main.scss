@@ -1,7 +1,6 @@
 @function em($target, $context: $font_size) {
     @return ($target / $context) * 1em;
 }
-
 //Main variables
 $browser-default: 16px;
 $font-size: 16px;
@@ -15,7 +14,6 @@ $large-font-size: 24px;
     width: 80px;
     height: 80px;
 }
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -23,33 +21,27 @@ $large-font-size: 24px;
     margin: 0;
     padding: 0;
 }
-
 html {
     font-size: em($font_size, $browser-default);
     height: 100%;
 }
-
 body {
     font-family: "Lato", serif;
     font-size: $browser-default;
     font-weight: 400;
     line-height: em(24px, $browser-default);
 }
-
 img {
     width: 100%;
     height: auto;
 }
-
 .wrapper {
     width: 90%;
     margin: 0px auto;
 }
-
 p {
     margin-bottom: 1.3em;
 }
-
 h1,
 h2,
 h3,
@@ -58,24 +50,19 @@ h4 {
     font-weight: inherit;
     line-height: 1.2;
 }
-
 h1 {
     margin-top: 0;
     font-size: 3.157em;
 }
-
 h2 {
     font-size: 2.369em;
 }
-
 h3 {
     font-size: 1.777em;
 }
-
 h4 {
     font-size: 1.333em;
 }
-
 
 /*==================================================
   Header
@@ -105,7 +92,6 @@ h4 {
             line-height: 0;
         }
     }
-    
     .fa {
         width: em(40px, $browser-default);
         height: em(40px, $browser-default);
@@ -118,10 +104,8 @@ h4 {
         padding: 1.3em 0 1.4em;
         font-size: 1.3em;
         z-index: 1000;
-        
     }
 }
-
 .navigation {
     float: right;
     li {
@@ -137,7 +121,6 @@ h4 {
         margin-left: em(20px, $browser-default);
     }
 }
-
 
 /*==================================================
   Hero
@@ -156,7 +139,6 @@ h4 {
         padding: em(10px, $browser-default);
     }
 }
-
 
 /*==================================================
   About Section Me
@@ -184,7 +166,6 @@ h4 {
             color: white;
         }
     }
-    
     .btn {
         position: relative;
         margin-top: em(40px, $browser-default);
@@ -214,7 +195,6 @@ h4 {
     }
 }
 
-
 /*==================================================
   Showcae Section
 ==================================================*/
@@ -226,12 +206,44 @@ h4 {
     padding-top: em(20px, $browser-default);
     padding-bottom: em(50px, $browser-default);
     position: relative;
-        
-        h1 {
-             padding-bottom: em(15px, $browser-default); 
-        }
+    h1 {
+        padding-bottom: em(15px, $browser-default);
     }
-  
+    .animate {
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    
+      @-webkit-keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateY(-20px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateY(0);
+            }
+         }
+         
+         @keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               transform: translateY(-20px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+         
+         .fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+         }
+}
+
 /*==================================================
   Contact and Map Section 
 ==================================================*/
@@ -248,26 +260,26 @@ h4 {
     padding-bottom: em(50px, $browser-default);
     text-align: center;
     #map {
-    
         height: 500px;
-    
     }
-    }
+}
+
 /*==================================================
   Footer 
 ==================================================*/
 
-footer{
+footer {
     background: #222;
     border-top: 4px solid #1F1F1F;
     padding: 2.10em 0 0;
     position: relative;
-    clear: both;
     color: #656565;
     color: white;
+    
+    .row {
+        margin-bottom: 0;
+    }
 }
-
-
 
 /* ==========================================================================
    Media Queries
@@ -276,10 +288,9 @@ footer{
 @media only screen and (min-width: em(501px, $browser-default)) {
     /* Style adjustments for viewports that meet the condition */
     .navigation {
-          display: block !important;
+        display: block !important;
     }
 }
-
 @media only screen and (max-width: em(800px, $browser-default)) {
     /* Style adjustments for viewports that meet the condition */
     .hero {
@@ -289,15 +300,13 @@ footer{
         }
     }
 }
-
 @media only screen and (max-width: em(500px, $browser-default)) {
     .header-dark .fa {
         display: block;
     }
-
-.navigation {
+    .navigation {
         display: none;
-        clear: both;    
+        clear: both;
         width: 100%;
         position: absolute;
         padding-top: em(82px, $browser-default);
@@ -306,26 +315,21 @@ footer{
         text-align: center;
         background-color: darkgrey;
         background-color: rgba(34, 34, 34, 0.95);
-    
-    li{
-        display: block;
-    }
-    
-    li a {
-          float: none;
-        padding: 0.85em;
-        margin-left: 0;
-        width:100%;
+        li {
+            display: block;
+        }
+        li a {
+            float: none;
+            padding: 0.85em;
+            margin-left: 0;
+            width: 100%;
+        }
     }
 }
-   
-}
-
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 144dpi) {
     /* Style adjustments for viewports that meet the condition */
 }
-
 
 /* ==========================================================================
    Helper classes
@@ -335,7 +339,6 @@ only screen and (min-resolution: 144dpi) {
     display: none !important;
     visibility: hidden;
 }
-
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -346,7 +349,6 @@ only screen and (min-resolution: 144dpi) {
     position: absolute;
     width: 1px;
 }
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -356,25 +358,20 @@ only screen and (min-resolution: 144dpi) {
     position: static;
     width: auto;
 }
-
 .invisible {
     visibility: hidden;
 }
-
 .clearfix:before,
 .clearfix:after {
     content: " ";
     display: table;
 }
-
 .clearfix:after {
     clear: both;
 }
-
 .clearfix {
     *zoom: 1;
 }
-
 
 /* ==========================================================================
    Print styles
@@ -430,7 +427,6 @@ only screen and (min-resolution: 144dpi) {
     }
 }
 
-
 /*------------------------------*\
     Grid System
 \*------------------------------*/
@@ -439,76 +435,59 @@ only screen and (min-resolution: 144dpi) {
 .column {
     box-sizing: border-box;
 }
-
 .row:before,
 .row:after {
     content: " ";
     display: table;
 }
-
 .row:after {
     clear: both;
 }
-
 .column {
     position: relative;
     float: left;
     display: block;
 }
-
 .column + .column {
     margin-left: 1.6%;
 }
-
 .column-1 {
     width: 6.86666666667%;
 }
-
 .column-2 {
     width: 15.3333333333%;
 }
-
 .column-3 {
     width: 23.8%;
 }
-
 .column-4 {
     width: 32.2666666667%;
 }
-
 .column-5 {
     width: 40.7333333333%;
 }
-
 .column-6 {
     width: 49.2%;
 }
-
 .column-7 {
     width: 57.6666666667%;
 }
-
 .column-8 {
     width: 66.1333333333%;
 }
-
 .column-9 {
     width: 74.6%;
 }
-
 .column-10 {
     width: 83.0666666667%;
 }
-
 .column-11 {
     width: 91.5333333333%;
 }
-
 .column-12 {
     width: 100%;
     margin-left: 0;
 }
-
 @media only screen and (max-width: 550px) {
     .column-1,
     .column-2,
@@ -530,7 +509,6 @@ only screen and (min-resolution: 144dpi) {
     }
 }
 
-
 /*------------------------------*\
     Styling
 \*------------------------------*/
@@ -540,25 +518,20 @@ only screen and (min-resolution: 144dpi) {
     min-height: 30px;
     text-align: center;
 }
-
 .row {
     margin-bottom: 10px;
 }
-
 .row:last-child {
     margin-bottom: 0;
 }
-
 .column .column {
     //Blank for now
 }
-
 .p {
     font-size: 14px;
     text-align: center;
     padding-top: 100px;
 }
-
 @media only screen and (max-width: 550px) {
     .row {
         margin-bottom: 0;

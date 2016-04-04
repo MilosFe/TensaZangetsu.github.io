@@ -1,4 +1,5 @@
 (function (global, $) {
+    'use strict';
 
     //Should refactor this for future use
     function cursorAnimation() {
@@ -50,8 +51,8 @@
             position: myLatLng,
             title: 'My residence'
         });
-        // Center my map on window resize
-        google.maps.event.addDomListener(window, 'resize', function () {
+        // Center my map on global resize
+        google.maps.event.addDomListener(global, 'resize', function () {
             var center = map.getCenter()
             google.maps.event.trigger(map, "resize")
             map.setCenter(center)
@@ -71,7 +72,6 @@
             $('.navigation').slideToggle('fast');
         });
         $(document).on("click", ".header-dark .navigation  ul li a", function () {
-            
             //Remove slide menu on click
             if ($(window).width() < 501) {
                 $('.navigation').slideToggle('fast');
@@ -84,7 +84,19 @@
         });
 
     }
-
+        var animate = function () {
+            var slideElement = '.animate';
+        if ($(slideElement).length) {
+            $(slideElement).each(function () {
+            var elementPosition = $(this).offset().top;
+            var top = $(global).scrollTop();
+             var windowHeght = $(global).height();
+               if (elementPosition < top + (windowHeght / 1.4)) {
+                    $(this).addClass('fadeInDown');
+                }
+            });
+        }
+    }
  
 
     //Init functions :) 
@@ -93,6 +105,10 @@
     setDate();
     setInterval(type, 4000);
     setInterval(cursorAnimation, 600);
+    animate();
+    $(global).on('scroll', function() {
+            animate();
+        });
 
 
 

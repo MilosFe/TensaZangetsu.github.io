@@ -5,13 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>TZ</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="google-site-verification" content="a2YIckmGsQl1oaq4GU3DR4o_5kBzJ1WarjhI7wG1Tzw" />
     <!--Mobile -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="cleartype" content="on">
     <meta name="author" content="Radoman Milos">
     <meta name="description" content="Radoman Milos web developer">
     <meta name="keywords" content="milos, serbia, frontend, backend">
@@ -48,18 +47,18 @@
 
 <body id="home">
     <!-- Header -->
-    <header  class="header-dark">
+    <header class="header-dark">
         <div class="wrapper">
             <div class="logo">
                 <span class="t">T<span class="z">Z</span></span>
             </div>
             <i class="fa fa-bars"></i>
-            <nav class="navigation" role="navigation">
+            <nav class="navigation">
                 <ul>
                     <li><a title="Home" href="#home">Home</a></li>
                     <li><a title="About" href="#about">About</a></li>
                     <li><a title="Showcase" href="#git">Showcase</a></li>
-                    <li><a title="Find me"href="#find">Find Me</a></li>
+                    <li><a title="Find me" href="#find">Find Me</a></li>
                 </ul>
             </nav>
         </div>
@@ -73,82 +72,85 @@
     </section>
     <!-- About Section  -->
     <section id="about" class="personal  clearfix">
-        <article class="wrapper row about">
+        <div class="wrapper row about">
+            <h1>About</h1>
             <div class="column column-12">
-                <h1>About</h1>
+
                 <i class="fa fa-user-secret"></i>
                 <h3>Radoman Milos - Web Developer</h3>
                 <h5>I love to read and write code, semi-pro Dota player and overall computer geek</h5>
-                <button class="btn"><a href="src/assets/downloads/Milos.pdf">Resume</a> </button>
+                <form action="src/assets/downloads/Milos.pdf">
+                    <input class="btn" type="submit" value="Resume">
+                </form>
+
             </div>
-        </article>
+        </div>
     </section>
     <!-- Git Section  -->
     <section id="git" class="git  clearfix">
-        <article class="wrapper row showcase">
-            <h1>Github Showcase</h1>
-            <div class="column column-3">
+        <h1>Github Showcase</h1>
+        <div class="wrapper row showcase">
+            <div class="column column-3 animate">
                 <div class="overlay">
                     <a href="https://github.com/TensaZangetsu/blog">
                         <img src="src/assets/images/Cms-tri-color.jpg" alt="custom cms git">
                     </a>
                 </div>
             </div>
-            <div class="column column-3">
+            <div class="column column-3 animate">
                 <a href="https://github.com/TensaZangetsu/Zend_MVC">
                     <img src="src/assets/images/Zend-tri-color.jpg" alt="zend php tutorial">
                 </a>
             </div>
-            <div class="column column-3">
+            <div class="column column-3 animate">
                 <a href="https://github.com/TensaZangetsu/Typewriter">
                     <img src="src/assets/images/Typewriter-tri-color.jpg" alt="typewriter libary">
                 </a>
             </div>
-            <div class="column column-3">
+            <div class="column column-3 animate">
                 <a href="https://github.com/TensaZangetsu/AngularJs_Session">
                     <img src="src/assets/images/App-factory-tri-color.jpg" alt="angular simple login session">
                 </a>
             </div>
-        </article>
+        </div>
     </section>
     <!-- Contact and Map Section  -->
     <section id="find" class="contact  clearfix">
-        <article class="wrapper row">
-            <h1>Find me</h1>
+        <h1>Find me</h1>
+        <div class="wrapper row">
+
             <div class="column column-12">
                 <div id="map">
 
                 </div>
 
             </div>
-        </article>
+        </div>
     </section>
-    
+
     <footer>
-        <div class="wrapper row clearfix">
+        <div class="wrapper row">
             <p id="date">Radoman Milos git</p>
         </div>
-          
-    <div class="fb-share-button" data-href="http://tensazangetsu.github.io" data-layout="button"></div>
-    </footer>
 
+
+    </footer>
+    <script src="src/components/jquery/dist/jquery.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="src/assets/js/main.js"></script>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1568347296809830";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 <!-- Scripting  -->
-<script src="src/components/jquery/dist/jquery.min.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src="src/assets/js/main.js"></script>
-<div id="fb-root"></div>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1568347296809830";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
 
-</script>
 
 
 </html>
