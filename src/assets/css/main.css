@@ -20,7 +20,8 @@ body {
   font-family: "Lato", serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  cursor: auto; }
 
 img {
   width: 100%;
@@ -112,7 +113,8 @@ h4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.48), #000), url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 700px; }
+  min-height: 700px;
+  background-attachment: fixed; }
   .hero .hero-text {
     color: white;
     margin-top: 19.625em;
@@ -226,12 +228,21 @@ h4 {
 footer {
   background: #222;
   border-top: 4px solid #1F1F1F;
-  padding: 2.10em 0 0;
+  padding: 2.10em 0 1em;
   position: relative;
   color: #656565;
   color: white; }
   footer .row {
     margin-bottom: 0; }
+  footer .social li {
+    list-style: none;
+    display: inline; }
+  footer i {
+    font-size: 0.875em;
+    padding: 0.5em;
+    color: #808080; }
+    footer i:hover {
+      color: white; }
 
 /* ==========================================================================
    Media Queries
@@ -246,6 +257,10 @@ footer {
     max-height: 37.5em; }
     .hero .hero-text {
       margin-top: 12.5em; } }
+@media only screen and (max-width: 100em) {
+  /* Style adjustments for viewports that meet the condition */
+  body {
+    font-size: 102%; } }
 @media only screen and (max-width: 31.25em) {
   .header-dark .fa {
     display: block; }

@@ -9,19 +9,19 @@
             opacity: 1
         }, 'fast', 'swing');
     }
-
     var x = ["Developer",
             "Designer",
             "Coder"];
     var i = 0;
     //Closure should not be after break up
     function type() {
-        $("#container").html("");
+        var container = $("#container")
+        container.html("");
         $.each(x[i].split(''), function (index, letter) {
             //we add 100*i ms sets delay to each letter 
             setTimeout(function () {
                 //we add the letter to the container
-                $('#container').html($('#container').html() + letter);
+                container.html(container.html() + letter);
 
             }, 100 * index);
         });
@@ -36,8 +36,7 @@
             lat: 44.80898,
             lng: 20.4784
         };
-
-
+        
         // Create a map object and specify the DOM element for display.
         var map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
@@ -59,22 +58,20 @@
         })
     }
 
-
-    var setDate = function(){
+    var setDate = function () {
         var d = new Date();
-        document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()  
-    } 
-  
-
+        document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()
+    }
     //* Note to thy self - this is ugly refactor it
     var menu = function () {
+        var navigation =  $('.navigation');
         $(document).on("click", ".header-dark .fa", function () {
-            $('.navigation').slideToggle('fast');
+           navigation.slideToggle('fast');
         });
         $(document).on("click", ".header-dark .navigation  ul li a", function () {
             //Remove slide menu on click
             if ($(window).width() < 501) {
-                $('.navigation').slideToggle('fast');
+                navigation.slideToggle('fast');
             };
             //Html is needed for Firefox otherwise works fine with body
             $('html,body').animate({
@@ -82,11 +79,7 @@
             }, 1000);
             return false;
         });
-
     }
-
- 
-
     //Init functions :) 
     initMap();
     menu();

@@ -30,6 +30,7 @@ body {
     font-size: $browser-default;
     font-weight: 400;
     line-height: em(24px, $browser-default);
+    cursor: auto;
 }
 img {
     width: 100%;
@@ -131,6 +132,7 @@ h4 {
     background-size: cover;
     background-position: center;
     min-height: 700px;
+    background-attachment: fixed;
     .hero-text {
         color: white;
         margin-top: em(314px, $browser-default);
@@ -271,13 +273,28 @@ h4 {
 footer {
     background: #222;
     border-top: 4px solid #1F1F1F;
-    padding: 2.10em 0 0;
+    padding: 2.10em 0 1em;
     position: relative;
     color: #656565;
     color: white;
     
     .row {
         margin-bottom: 0;
+    }
+    
+    .social li {
+        list-style: none;
+        display: inline;
+        
+    }
+    
+    i {
+       font-size:  em(14px, $browser-default);
+        padding: em(8px, $browser-default);
+        color:#808080;
+        &:hover{
+            color: white;
+        }
     }
 }
 
@@ -298,6 +315,13 @@ footer {
         .hero-text {
             margin-top: em(200px, $browser-default);
         }
+    }
+}
+
+@media only screen and (max-width: em(1600px, $browser-default)) {
+    /* Style adjustments for viewports that meet the condition */
+    body {
+        font-size: 102%;
     }
 }
 @media only screen and (max-width: em(500px, $browser-default)) {
