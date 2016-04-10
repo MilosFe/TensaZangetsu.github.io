@@ -1,5 +1,9 @@
 (function (global, $) {
     'use strict';
+    
+     var docElem = global.document.documentElement;
+     var factor = 0.2;
+     var animateEl = document.getElementById('me'); 
 
     //Should refactor this for future use
     function cursorAnimation() {
@@ -15,7 +19,7 @@
     var i = 0;
     //Closure should not be after break up
     function type() {
-        var container = $("#container")
+        var container = $("#container");
         container.html("");
         $.each(x[i].split(''), function (index, letter) {
             //we add 100*i ms sets delay to each letter 
@@ -31,12 +35,12 @@
         }
     }
     //Google MAPS Api V3
-    function initMap() {
+   /* function initMap() {
         var myLatLng = {
             lat: 44.80898,
             lng: 20.4784
         };
-        
+
         // Create a map object and specify the DOM element for display.
         var map = new google.maps.Map(document.getElementById('map'), {
             center: myLatLng,
@@ -57,16 +61,16 @@
             map.setCenter(center)
         })
     }
-
+*/
     var setDate = function () {
-        var d = new Date();
-        document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()
-    }
-    //* Note to thy self - this is ugly refactor it
+            var d = new Date();
+            document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()
+        }
+        //* Note to thy self - this is ugly refactor it
     var menu = function () {
-        var navigation =  $('.navigation');
+        var navigation = $('.navigation');
         $(document).on("click", ".header-dark .fa", function () {
-           navigation.slideToggle('fast');
+            navigation.slideToggle('fast');
         });
         $(document).on("click", ".header-dark .navigation  ul li a", function () {
             //Remove slide menu on click
@@ -79,9 +83,11 @@
             }, 1000);
             return false;
         });
-    }
-    //Init functions :) 
-    initMap();
+    } 
+         
+         
+        //Init functions :) 
+   
     menu();
     setDate();
     setInterval(type, 4000);
@@ -90,3 +96,5 @@
 
 
 })(this, jQuery)
+
+ 
