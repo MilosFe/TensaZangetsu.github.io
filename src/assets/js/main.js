@@ -35,7 +35,7 @@
         }
     }
     //Google MAPS Api V3
-   /* function initMap() {
+    function initMap() {
         var myLatLng = {
             lat: 44.80898,
             lng: 20.4784
@@ -61,7 +61,7 @@
             map.setCenter(center)
         })
     }
-*/
+
     var setDate = function () {
             var d = new Date();
             document.getElementById('date').innerHTML = 'Radoman Milos Git &#169;' + d.getFullYear()
@@ -87,7 +87,7 @@
          
          
         //Init functions :) 
-   
+    initMap();
     menu();
     setDate();
     setInterval(type, 4000);
