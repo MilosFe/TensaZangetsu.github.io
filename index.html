@@ -28,7 +28,7 @@
     <meta name="twitter:image" content="http://tensazangetsu.github.io/src/assets/images/share.png" />
     <!-- Css -->
     <link rel="canonical" href="http://tensazangetsu.github.io/">
-    <link href='https://fonts.googleapis.com/css?family=Lato:700,300,400' rel='stylesheet' type='text/css'>
+    <link async href='https://fonts.googleapis.com/css?family=Lato:700,300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="src/assets/css/font-awesome-4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/assets/css/main.css">
     <!-- Icons -->
@@ -51,7 +51,41 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Script -->
     <script src="src/components/jquery/dist/jquery.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script async src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initMap() {
+          var global = this;
+        var myLatLng = {
+            lat: 44.80898,
+            lng: 20.4784
+        };
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            scrollwheel: false,
+            zoom: 17
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            title: 'My residence'
+        });
+        // Center my map on global resize
+        google.maps.event.addDomListener(global, 'resize', function () {
+            var center = map.getCenter()
+            google.maps.event.trigger(map, "resize")
+            map.setCenter(center)
+        })
+    }
+        window.onload = function(){
+            initMap();
+        }
+  
+    </script>
+    <script async src="src/assets/js/main.js"></script>
     
 </head>
 
@@ -154,8 +188,7 @@
 
         </div>
    
-    <script src="src/assets/js/main.js"></script>
-
+    
     </footer>
     
 </body>

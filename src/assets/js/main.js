@@ -35,32 +35,7 @@
         }
     }
     //Google MAPS Api V3
-    function initMap() {
-        var myLatLng = {
-            lat: 44.80898,
-            lng: 20.4784
-        };
-
-        // Create a map object and specify the DOM element for display.
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: myLatLng,
-            scrollwheel: false,
-            zoom: 17
-        });
-
-        // Create a marker and set its position.
-        var marker = new google.maps.Marker({
-            map: map,
-            position: myLatLng,
-            title: 'My residence'
-        });
-        // Center my map on global resize
-        google.maps.event.addDomListener(global, 'resize', function () {
-            var center = map.getCenter()
-            google.maps.event.trigger(map, "resize")
-            map.setCenter(center)
-        })
-    }
+  
 
     var setDate = function () {
             var d = new Date();
@@ -87,7 +62,6 @@
          
          
         //Init functions :) 
-    initMap();
     menu();
     setDate();
     setInterval(type, 4000);
