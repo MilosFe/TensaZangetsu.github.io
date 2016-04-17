@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
+  <title>Radoman Milos - Web Developer</title>
   <meta name="description" content="Milos Radoman web developer personal page">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="a2YIckmGsQl1oaq4GU3DR4o_5kBzJ1WarjhI7wG1Tzw" />
@@ -24,6 +24,37 @@
   <meta name="twitter:description" content="View my page and my work" />
   <meta name="twitter:image" content="http://tensazangetsu.github.io/images/share.png" />
   <link rel="stylesheet" href="css/styles.min.css">
+  <script async src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initMap() {
+            var global = this;
+            var myLatLng = {
+                lat: 44.80898,
+                lng: 20.4784
+            };
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                scrollwheel: false,
+                zoom: 17
+            });
+            // Create a marker and set its position.
+            var marker = new google.maps.Marker({
+                map: map,
+                position: myLatLng,
+                title: 'My residence'
+            });
+            // Center my map on global resize
+            google.maps.event.addDomListener(global, 'resize', function () {
+                var center = map.getCenter()
+                google.maps.event.trigger(map, "resize")
+                map.setCenter(center)
+            })
+        }
+        window.onload = function () {
+            initMap();
+        }
+    </script>
 </head>
 
 <body>
@@ -65,7 +96,7 @@
                 <i class="fa fa-user-secret"></i>
                 <h3>Radoman Milos - Web Developer</h3>
                 <h5>I love to read and write code, semi-pro Dota player and overall computer geek</h5>
-                <form action="app/downloads/Milos.pdf">
+                <form action="downloads/Milos.pdf">
                     <input class="btn" type="submit" value="Resume">
                 </form>
 
