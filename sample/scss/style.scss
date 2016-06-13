@@ -1,0 +1,296 @@
+@import "mixins.scss";
+@import "global.scss";
+@import "typography.scss";
+@import "grid.scss";
+@import "font-awsome.scss";
+
+/* ==========================================================================
+   Header Styless
+   ========================================================================== */
+
+header {
+    background-image: linear-gradient(rgba( 0, 0, 0, 0.7), rgba( 0, 0, 0, 0.7)), url('../images/hero.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    color: white;
+    word-spacing: 5px;
+    .text-box {
+        position: absolute;
+        width: 85%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1 {
+            letter-spacing: em(2px, $browser-default);
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.7em 1.9em;
+            text-decoration: none;
+            border-radius: 5em;
+            margin-right: em(15px, $browser-default);
+            transition: all 0.2s;
+            &.btn-full {
+                background-color: $carrot;
+                border: em(1px, $browser-default) solid$carrot;
+                color: #ffffff;
+                &:hover {
+                    background: none;
+                    border: em(1px, $browser-default) solid$carrot;
+                    color: $carrot;
+                }
+            }
+            &.btn-ghost {
+                border: em(1px, $browser-default) solid$carrot;
+                color: $carrot;
+                &:hover {
+                    background-color: $carrot;
+                    border: em(1px, $browser-default) solid$carrot;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .fa {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        font-size: 2em;
+        right: 5%;
+        top: 1.7em;
+        color: white;
+        transition: color 0.5s ease;
+        @include media($tablet-small) {
+            display: block;
+        }
+        &:hover {
+            color: $carrot;
+        }
+    }
+}
+
+/********* Navigation ********/
+
+.logo {
+    height: 6.25em;
+    float: left;
+    margin-top: em(20px, $browser-default);
+}
+.logo-black {
+    float: left;
+    display: none;
+    height: 3.25em;
+    margin-top: em(10px, $browser-default);
+    margin-bottom: em(10px, $browser-default);
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1;
+    box-shadow: 0 2px 2px #efefef;
+    .fa {
+        color: black;
+        top:0.7em;
+    }
+    .logo {
+        display: none;
+    }
+    .logo-black {
+        display: block;
+    }
+    .main-nav {
+        margin-top: em(25px, $browser-default);
+        li {
+            margin-left: em(40px, $browser-default);
+            a {
+                &:link,
+                &:visited {
+                    padding-bottom: em(15px, $browser-default);
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+.main-nav {
+    display: block;
+    float: right;
+    list-style: none;
+    margin-top: em(55px, $browser-default);
+    @include media($tablet-small) {
+        clear: left;
+        display: block;
+        float: none;
+        text-align: center;
+        display: none;
+    }
+    li {
+        display: inline-block;
+        margin-left: em(40px, $browser-default);
+        @include media($tablet-small) {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            &:link,
+            &:visited {
+                padding-bottom: em(8px, $browser-default);
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: em(18px, $browser-default);
+                transition: border-bottom 0.5s ease;
+                @include media($tablet-small) {
+                    float: none;
+                }
+            }
+            &:hover {
+                border-bottom: em(2px, $browser-default) solid $carrot;
+                @include media($tablet-small) {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Feature
+   ========================================================================== */
+
+.feature {
+    @include heading;
+    .fa {
+        font-size: 4em;
+    }
+}
+
+/* ==========================================================================
+   Meals
+   ========================================================================== */
+
+.meals-showcase {
+    @extend %clearfix;
+    width: 100%;
+    list-style: none;
+    li {
+        display: block;
+        float: left;
+        width: 25%;
+    }
+}
+.meals-photo {
+    width: 100%;
+    overflow: hidden;
+    background: black;
+    img {
+        opacity: 0.7;
+        transform: scale(1.5);
+        transition: all 0.5s ease;
+        &:hover {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+/* ==========================================================================
+   How it works
+   ========================================================================== */
+
+.how-it-works {
+    @include heading;
+    text-align: left;
+    background-color: #dddddd;
+    padding-bottom: em(30px, $browser-default);
+    .app-screen {
+        width: 30vh;
+    }
+    a {
+        display: inline-block;
+    }
+    .works-step {
+        margin-top: em(30px, $browser-default);
+        margin-bottom: em(60px, $browser-default);
+        text-align: left;
+        @include media($mobile-lg) {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        div {
+            font-size: 1.3em;
+            display: inline-block;
+            color: $carrot;
+            border: 1px solid $carrot;
+            border-radius: 50%;
+            height: em(50px, $browser-default);
+            width: em(50px, $browser-default);
+            text-align: center;
+            line-height: em(50px, $browser-default);
+            float: left;
+            margin-right: em(15px, $browser-default);
+        }
+        p {
+            font-size: 1.3em;
+            padding: 11px;
+        }
+    }
+    .app {
+        height: em(45px, $browser-default);
+        margin-left: em(20px, $browser-default);
+    }
+}
+
+/* ==========================================================================
+   Cities
+   ========================================================================== */
+
+.cities {
+    @include heading;
+}
+.city {
+    padding-top: 0.5em;
+    font-family: serif;
+    color: $dark-grey;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+    padding: em(50px, $browser-default);
+    background: #333;
+    color: white;
+    font-size: 1.3em;
+    .fa {
+        color: white;
+        transition: color 0.5s ease;
+        &:hover {
+            color: $carrot;
+        }
+    }
+    .column {
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+        li {
+            margin-right: em(15px, $browser-default);
+            display: inline-block;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
